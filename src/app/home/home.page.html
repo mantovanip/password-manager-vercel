@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title position="floating">
+      Gerenciador Senha
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Gerenciador Senha</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ion-img style="width: 69px" src="assets/img/cadeado.png" alt="icone-cadeado">
+    </ion-img>
+
+    <ion-item>
+      <ion-label position="stacked">Site</ion-label>
+      <ion-input placeholder="Enter Site" [(ngModel)]="credencial.site"></ion-input>
+    </ion-item>
+
+    <ion-item >
+      <ion-label position="stacked">Login</ion-label>
+      <ion-input placeholder="Enter Login" type="email" [(ngModel)]="credencial.login"></ion-input>
+    </ion-item>
+
+    <ion-item >
+      <ion-label position="stacked">Password </ion-label>
+      <ion-input type="password" placeholder="Enter Password" [(ngModel)]="credencial.password"></ion-input>
+    </ion-item>
+
+    <ion-list>
+      <ion-button fill="outline" position="floating" (click)="armazenar()" color="dark">Armazenar</ion-button>
+    </ion-list>
+    <ion-list>
+      <ion-button fill="outline" position="floating" (click)="clear()" color="danger">Limpar</ion-button>
+    </ion-list>
+  </div>
+</ion-content>
