@@ -8,7 +8,7 @@ export class LocalStorageService {
   constructor() { }
 
   set(key:string,value:any){
-    this.localStorage.setItem(key,value);
+    this.localStorage.setItem(key,JSON.stringify(value));
   }
   get(key:string){
     return this.localStorage.getItem(key);
@@ -19,14 +19,20 @@ export class LocalStorageService {
   }
   
   append(key:string,value:any){
-    //retorna o valor que está no localstorage
-    let old_value = this.get(key) == null ? '[]' : this.get(key);
-    //transforma o valor de string para JSON
-    let json_value = JSON.parse(old_value);
-    //adicionar o novo valor no vetor
-    json_value.push(value);
-    //salva a nova informaçao no localstorage
-    this.set(key,JSON.stringify(json_value));
-  }
+    // Retorna o valor que está no localStorage
+    let old_value = this.get(key) ;
+    let new_value:Array<any>;
+    if (old_value == null){
+      new_value = [];
+    }else{
+      // Transforma o valor de String para JSON
+      new_value  = JSON.parse(old_value);
+    }
 
+    // Adicionar o novo valor no vetor
+    new_value.push(value);
+
+    // Salva a nova informação no localStorage
+    this.set(key,new_value);
+  }
 }
