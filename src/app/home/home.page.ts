@@ -8,7 +8,7 @@ import { LocalStorageService } from '../local-storage.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-public credencial:Credencial;
+public credencial = {} as Credencial;
 
   constructor(
     public local_storage: LocalStorageService
@@ -17,11 +17,10 @@ public credencial:Credencial;
   }
   carregar() {
  
-   
   }
 
   armazenar() {
-this.local_storage.set('credenciais',this.credencial)
+this.local_storage.append('credenciais',this.credencial)
   }
 
   clear() {
