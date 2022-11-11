@@ -35,4 +35,7 @@ export class LocalStorageService {
     // Salva a nova informação no localStorage
     this.set(key,new_value);
   }
+  getJSON(key:string){
+    return JSON.parse(this.get(key));
+  }
 }
