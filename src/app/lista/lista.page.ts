@@ -9,6 +9,8 @@ import { LocalStorageService } from '../local-storage.service';
 })
 export class ListaPage implements OnInit {
 public data:Array<Credencial> = [];
+public icon_type:string = 'eye-outline';
+public pwd_type:string = 'password';
   constructor(
     public local_storage:LocalStorageService
   ) {}
@@ -18,6 +20,16 @@ public data:Array<Credencial> = [];
   }
   carregar(){
     this.data = this.local_storage.getJSON('credenciais');
+  }
+  exibir(){
+   if (this.icon_type == 'eye-outline'){
+    this.icon_type = 'eye-off-outline';
+    this.pwd_type = 'text';
+   }else{
+    this.pwd_type = 'password';
+    this.icon_type = 'eye-outline';
+   
+   }
   }
   clear() {
     this.local_storage.clear();

@@ -14,9 +14,9 @@
       </ion-item>
       <div class="ion-padding" slot="content">
         <p>Login: <strong>{{ d.login }}</strong></p>
-        <input type="password" [value]="d.senha" />
+        <input [type]="pwd_type" [value]="d.password" />
         
-        <ion-icon name="eye-outline"></ion-icon>
+        <ion-icon class="eye" [name]="icon_type" (click)="exibir()"></ion-icon>
         <ion-list>
           <ion-button fill="outline" position="floating" (click)="clear()"  expand="block"
           color="danger">Apagar</ion-button>
