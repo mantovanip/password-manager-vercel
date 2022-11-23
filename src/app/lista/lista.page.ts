@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Credencial } from '../credencial';
+import { FirebaseService } from '../firebase.service';
 import { LocalStorageService } from '../local-storage.service';
 
 @Component({
@@ -12,7 +13,8 @@ public data:Array<Credencial> = [];
 public icon_type:string = 'eye-outline';
 public pwd_type:string = 'password';
   constructor(
-    public local_storage:LocalStorageService
+    public local_storage:LocalStorageService,
+    public firebase:FirebaseService
   ) {}
 
   ngOnInit() {
@@ -33,5 +35,8 @@ public pwd_type:string = 'password';
   }
   clear() {
     this.local_storage.clear();
+  }
+  upload(){
+    this.firebase.upload();
   }
 }
