@@ -6,23 +6,21 @@
 
 <ion-content>
   <ion-accordion-group>
-    <ion-accordion 
-      [value]="d.site" *ngFor="let d of data"
-    >
+    <ion-accordion [value]="d.site" *ngFor="let d of data">
       <ion-item slot="header" color="light">
         <ion-label>{{ d.site }}</ion-label>
       </ion-item>
       <div class="ion-padding" slot="content">
         <p>Login: <strong>{{ d.login }}</strong></p>
         <input [type]="pwd_type" [value]="d.password" />
-        
+
         <ion-icon class="eye" [name]="icon_type" (click)="exibir()"></ion-icon>
         <ion-list>
-          <ion-button fill="outline" position="floating" (click)="clear()"  expand="block"
-          color="danger">Apagar</ion-button>
-           </ion-list>
-        
+          <ion-button fill="outline" position="floating" (click)="clear()" expand="block" color="danger">Apagar
+          </ion-button>
+        </ion-list>
+
       </div>
-    </ion-accordion>    
+    </ion-accordion>
   </ion-accordion-group>
 </ion-content>

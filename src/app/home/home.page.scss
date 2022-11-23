@@ -1,5 +1,8 @@
-#container {
+.title{
   text-align: center;
+  font-size: 20px;
+}
+#container {
 
   position: absolute;
   left: 0;
@@ -16,10 +19,9 @@
 #container p {
   font-size: 16px;
   line-height: 22px;
-
-  color: #8c8c8c;
-
+  color: #777777;
   margin: 0;
+  overflow: auto;
 }
 
 #container a {
@@ -27,7 +29,11 @@
   width: 100%;
 }
 
-#cadeado{
-  transform: translate(100%,-50%);
+#cadeado {
+  transform: translate(100%, -50%);
   width: 130px;
+  box-shadow: 0 0 0 10px hsl(0, 0%, 80%),
+    0 0 0 15px hsl(0, 0%, 90%);
+  ;
+
 }
