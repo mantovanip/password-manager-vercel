@@ -13,7 +13,10 @@ export class FirebaseService {
   ) { }
   upload(){
     this.firebase.database.ref('/credenciais')
-    .set(this.ls.getJSON('credencias'));
+    .set(this.ls.getJSON('credenciais'));
     
+  }
+  dowmload(){
+    this.firebase.object()
   }
 }

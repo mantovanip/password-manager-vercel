@@ -23,6 +23,7 @@ import { getAnalytics } from "firebase/analytics";
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+//export é um comando nativo js, exporta para escopo global
 export const firebaseConfig = {
   apiKey: "AIzaSyCWsiSIK7AtpgWonQi6rGGHOAXG7r1ypFo",
   authDomain: "password-gc.firebaseapp.com",
