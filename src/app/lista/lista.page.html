@@ -15,15 +15,14 @@
       <div class="ion-padding" slot="content">
         <p>Login: <strong>{{ d.login }}</strong></p>
         <input [type]="pwd_type" [value]="d.password" />
-
         <ion-icon class="eye" [name]="icon_type" (click)="exibir()"></ion-icon>
       </div>
     </ion-accordion>
   </ion-accordion-group>
-  <ion-button (click)="upload()">Backup</ion-button>
-  <ion-button (click)="download()">Download</ion-button>
-  <ion-button (click)="carregar()">Carregar</ion-button>
-  <ion-button fill="outline" position="floating" (click)="clear()"  color="danger">Apagar </ion-button>
-  <ion-button routerLink="/home">Adicionar</ion-button>
+      <ion-button fill="outline" position="floating" (click)="upload()">Backup</ion-button>
+      <ion-button fill="outline" position="floating" (click)="download()">Download</ion-button>
+      <ion-button fill="outline" position="floating" (click)="carregar()">Carregar</ion-button>
+      <ion-button fill="outline" position="floating" (click)="clear()" color="danger">Apagar </ion-button>
+      <ion-button fill="outline" position="floating" routerLink="/home">Adicionar</ion-button>
 
 </ion-content>
