@@ -33,6 +33,10 @@ export class ListaPage implements OnInit {
 
     }
   }
+  
+  clear() {
+    this.local_storage.clear();
+  }
 
   upload() {
     this.firebase.upload();
