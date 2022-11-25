@@ -5,7 +5,8 @@
 </ion-header>
 
 <ion-content>
-  <ion-button (click)="upload()">Upload</ion-button>
+
+
   <ion-accordion-group>
     <ion-accordion [value]="d.site" *ngFor="let d of data">
       <ion-item slot="header" color="light">
@@ -16,12 +17,10 @@
         <input [type]="pwd_type" [value]="d.password" />
 
         <ion-icon class="eye" [name]="icon_type" (click)="exibir()"></ion-icon>
-        <ion-list>
-          <ion-button fill="outline" position="floating" (click)="clear()" expand="block" color="danger">Apagar
-          </ion-button>
-        </ion-list>
-
       </div>
     </ion-accordion>
   </ion-accordion-group>
+  <ion-button (click)="upload()">Backup</ion-button>
+  <ion-button (click)="download()">Download</ion-button>
+  <ion-button (click)="carregar()">Carregar</ion-button>
 </ion-content>

@@ -9,6 +9,8 @@ import { LocalStorageService } from '../local-storage.service';
 })
 export class HomePage {
   public credencial = {} as Credencial;
+  public data: Array<Credencial> = [];
+
 
   constructor(
     public local_storage: LocalStorageService
@@ -16,13 +18,16 @@ export class HomePage {
     this.carregar();
   }
   carregar() {
-    
+    this.data = this.local_storage.getJSON('credenciais');
+
 
   }
 
   armazenar() {
     this.local_storage.append('credenciais', this.credencial);
     this.limpar();
+    this.carregar();
+
 
   }
 
