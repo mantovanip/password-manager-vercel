@@ -9,7 +9,7 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar class="title">
-      <ion-title  size="large">Gerenciador Senha</ion-title>
+      <ion-title size="large">Gerenciador Senha</ion-title>
     </ion-toolbar>
   </ion-header>
 
@@ -22,20 +22,19 @@
       <ion-input placeholder="Enter Site" [(ngModel)]="credencial.site"></ion-input>
     </ion-item>
 
-    <ion-item >
-      <ion-label position="stacked">Login</ion-label> 
+    <ion-item>
+      <ion-label position="stacked">Login</ion-label>
       <ion-input placeholder="Enter Login" type="email" [(ngModel)]="credencial.login"></ion-input>
     </ion-item>
 
-    <ion-item >
+    <ion-item>
       <ion-label position="stacked">Password </ion-label>
       <ion-input type="password" placeholder="Enter Password" [(ngModel)]="credencial.password"></ion-input>
     </ion-item>
 
     <ion-list>
-      <ion-button fill="outline" position="floating" (click)="armazenar()"   expand="block"
-      color="dark">Armazenar</ion-button>
+      <ion-button fill="outline" position="floating" (click)="armazenar()" color="dark">Armazenar</ion-button>
     </ion-list>
-    
+
   </div>
 </ion-content>
